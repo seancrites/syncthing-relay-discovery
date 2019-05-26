@@ -62,7 +62,7 @@ RUN curl -Ls ${RELAY_DOWNLOADURL} --output relaysrv.tar.gz \
 		&& tar -zxf discosrv.tar.gz \
 		&& rm relaysrv.tar.gz \
 		&& rm discosrv.tar.gz \
-		&& mkdir -p ${USER_HOME}/server ${USER_HOME}/certs ${USER_HOME}/db \
+		&& mkdir -p ${USER_HOME}/server ${USER_HOME}/certs ${USER_HOME}/db ${USER_HOME}/logs\
 		&& cp /tmp/*relaysrv*/*relaysrv ${USER_HOME}/server/relaysrv \
 		&& cp /tmp/*discosrv*/*discosrv ${USER_HOME}/server/discosrv \
 		&& apt-get --auto-remove -y purge ${BUILD_REQUIREMENTS} \
