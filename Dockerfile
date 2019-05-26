@@ -80,7 +80,7 @@ RUN chmod +x ${USER_HOME}/server/start_relay.sh ${USER_HOME}/server/start_discov
 		&& chown -R ${USERNAME}:${USERGROUP} ${USER_HOME}
 
 EXPOSE ${STATUS_PORT} ${RELAY_PORT} ${DISCO_PORT}
-VOLUME ${USER_HOME}/certs
+VOLUME ${USER_HOME}/certs ${USER_HOME}/logs
 
 USER $USERNAME
 WORKDIR ${USER_HOME}/server/
