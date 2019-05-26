@@ -3,16 +3,16 @@ Docker Container for the global relay server for the [http://syncthing.net/](htt
 
 The files for this container can be found at my [GitHub repo](https://github.com/t4skforce/syncthing-relay-discovery)
 
-[![](https://images.microbadger.com/badges/image/t4skforce/syncthing-relay-discovery.svg)](http://microbadger.com/images/t4skforce/syncthing-relay-discovery "Get your own image badge on microbadger.com") [![](https://img.shields.io/docker/automated/t4skforce/syncthing-relay-discovery.svg)](https://cloud.docker.com/repository/docker/t4skforce/syncthing-relay-discovery) [![](https://img.shields.io/docker/build/t4skforce/syncthing-relay-discovery.svg)](https://cloud.docker.com/repository/docker/t4skforce/syncthing-relay-discovery) [![](https://images.microbadger.com/badges/version/t4skforce/syncthing-relay-discovery.svg)](http://microbadger.com/images/t4skforce/syncthing-relay-discovery "Get your own version badge on microbadger.com") [![](https://img.shields.io/docker/pulls/t4skforce/syncthing-relay-discovery.svg)](https://cloud.docker.com/repository/docker/t4skforce/syncthing-relay-discovery) [![](https://img.shields.io/docker/stars/t4skforce/syncthing-relay-discovery.svg)](https://cloud.docker.com/repository/docker/t4skforce/syncthing-relay-discovery) [![](https://img.shields.io/github/last-commit/t4skforce/syncthing-relay-discovery.svg)](https://github.com/t4skforce/syncthing-relay-discovery) [![](https://img.shields.io/maintenance/yes/2019.svg)](https://github.com/t4skforce/syncthing-relay-discovery) [![](https://img.shields.io/github/issues-raw/t4skforce/syncthing-relay-discovery.svg)](https://github.com/t4skforce/syncthing-relay-discovery/issues) [![](https://img.shields.io/github/issues-pr-raw/t4skforce/syncthing-relay-discovery.svg)](https://github.com/t4skforce/syncthing-relay-discovery/pulls)
+[![](https://images.microbadger.com/badges/image/seancrites/syncthing-relay-discovery-logging.svg)](http://microbadger.com/images/seancrites/syncthing-relay-discovery-logging "Get your own image badge on microbadger.com") [![](https://img.shields.io/docker/automated/seancrites/syncthing-relay-discovery-logging.svg)](https://cloud.docker.com/repository/docker/seancrites/syncthing-relay-discovery-logging) [![](https://img.shields.io/docker/build/seancrites/syncthing-relay-discovery-logging.svg)](https://cloud.docker.com/repository/docker/seancrites/syncthing-relay-discovery-logging) [![](https://images.microbadger.com/badges/version/seancrites/syncthing-relay-discovery-logging.svg)](http://microbadger.com/images/seancrites/syncthing-relay-discovery-logging "Get your own version badge on microbadger.com") [![](https://img.shields.io/docker/pulls/seancrites/syncthing-relay-discovery-logging.svg)](https://cloud.docker.com/repository/docker/seancrites/syncthing-relay-discovery-logging) [![](https://img.shields.io/docker/stars/seancrites/syncthing-relay-discovery-logging.svg)](https://cloud.docker.com/repository/docker/seancrites/syncthing-relay-discovery-logging) [![](https://img.shields.io/github/last-commit/seancrites/syncthing-relay-discovery-logging.svg)](https://github.com/seancrites/syncthing-relay-discovery-logging) [![](https://img.shields.io/maintenance/yes/2019.svg)](https://github.com/seancrites/syncthing-relay-discovery-logging) [![](https://img.shields.io/github/issues-raw/seancrites/syncthing-relay-discovery-logging.svg)](https://github.com/seancrites/syncthing-relay-discovery-logging/issues) [![](https://img.shields.io/github/issues-pr-raw/seancrites/syncthing-relay-discovery-logging.svg)](https://github.com/seancrites/syncthing-relay-discovery-logging/pulls)
 
 
 # About the Container
 
-This build is based on [debian:latest](https://hub.docker.com/_/debian/) and installs the latests successful build of the syncthing relay and discovery server.
+This build is based on t4skforce's [syncthing-relay-discovery](https://github.com/t4skforce/syncthing-relay-discovery) docker image and installs the latests successful build of the syncthing relay server, discovery server and enables logging of both.
 
 # How to use this image
 
-`docker run --name syncthing-relay -d -p 22067:22067 --restart=always t4skforce/syncthing-relay-discovery:latest`
+`docker run --name syncthing-relay -d -p 22067:22067 --restart=always seancrites/syncthing-relay-discovery-logging:latest`
 
 This will store the certificates and all of the data in `/home/syncthing/`. You will probably want to make at least the certificate folder a persistent volume (recommended):
 
@@ -47,7 +47,7 @@ docker run --name syncthing-relay-discovery -d -p 22067:22067 -p 22026:22026 -e 
 
 ## Options
 
-* DEBUG: enable debugging (true/false) / default:false
+* DEBUG: enable debugging (true/false) / default:true
 
 ### Syncthing-Relay Server
 
