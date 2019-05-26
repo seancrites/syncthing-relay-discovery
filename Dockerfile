@@ -4,7 +4,7 @@ FROM debian:latest
 ########################################
 # Syncthing-Relay Server
 ENV RELAY_PORT     22067
-ENV RELAY_OPTS     ""
+ENV RELAY_OPTS     "-debug"
 # to enable the status interface add ' -p 22070:22070' to you docker command
 ENV STATUS_PORT     22070
 
@@ -23,7 +23,7 @@ ENV POOLS           ""
 
 # Syncthing-Discovery Server
 ENV DISCO_PORT      22026
-ENV DISCO_OPTS      ""
+ENV DISCO_OPTS      "-debug"
 
 ########################################
 #               Setup                  #
